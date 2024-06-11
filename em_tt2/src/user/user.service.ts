@@ -12,9 +12,7 @@ export class UserService {
 
   async solveProblems(): Promise<number> {
     const updateResult = await this.usersRepository.update(
-        {
-          problems: true
-        },
+        { problems: true  },
         { problems: false },
       );
     return updateResult.affected;
